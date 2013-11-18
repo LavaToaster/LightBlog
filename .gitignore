@@ -7,3 +7,4 @@ Thumbs.db
 /.idea
 .iml
 bootstrap/environments.php
+_ide_helper.php
