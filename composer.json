@@ -5,6 +5,9 @@
 	"require": {
 		"laravel/framework": "4.0.*"
 	},
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "1.*"
+    },
 	"autoload": {
 		"classmap": [
 			"app/commands",
