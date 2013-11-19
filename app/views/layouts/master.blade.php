@@ -8,7 +8,7 @@
     <body>
         @yield('content')
 
-        <script src="{{ asset('components/jquery/jquery.js }}"></script>
-        <script src="{{ asset('components/bootstrap/bootstrap.js }}"></script>
+        <script src="{{ asset('components/jquery/jquery.js') }}"></script>
+        <script src="{{ asset('components/bootstrap/bootstrap.js') }}"></script>
     </body>
 </html>
