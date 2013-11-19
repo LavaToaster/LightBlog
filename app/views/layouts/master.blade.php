@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ $title }}</title>
         <link href="{{ asset('components/bootstrap/dist/css/bootstrap.css') }}" rel="stylesheet">
+        <link href="{{ asset('components/sir-trevor-js/sir-trevor.css') }}" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
@@ -47,6 +48,7 @@
             </div>
         </footer>-->
         <script src="{{ asset('components/jquery/jquery.js') }}"></script>
-        <script src="{{ asset('components/bootstrap/bootstrap.js') }}"></script>
+        <script src="{{ asset('components/bootstrap/dist/js/bootstrap.js') }}"></script>
+        <script src="{{ asset('components/sir-trevor-js/sir-trevor.css') }}"></script>
     </body>
 </html>
