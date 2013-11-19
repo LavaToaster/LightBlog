@@ -15,9 +15,9 @@ interface BlogPostInterface
 
     public function setAuthor($author);
 
-    public function getDate();
+    public function getPublishDate();
 
-    public function setDate($date);
+    public function setPublishDate($date);
 
     public function save();
 

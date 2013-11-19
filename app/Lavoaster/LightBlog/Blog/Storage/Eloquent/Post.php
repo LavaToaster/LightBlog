@@ -34,14 +34,14 @@ class Post extends \Eloquent implements BlogPostInterface
         $this->author = $author;
     }
 
-    public function getDate()
+    public function getPublishDate()
     {
-        return $this->date;
+        return $this->published_at;
     }
 
-    public function setDate($date)
+    public function setPublishDate($date)
     {
-        $this->date = $date;
+        $this->published_at = $date;
     }
 
 }
