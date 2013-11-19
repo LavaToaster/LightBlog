@@ -2,13 +2,13 @@
 
 use Lavoaster\LightBlog\Blog\Repositories\BlogPostRepositoryInterface;
 use Lavoaster\LightBlog\Blog\Storage\BlogPostInterface;
-use Lavoaster\LightBlog\Blog\Storage\Eloquent\BlogPost;
+use Lavoaster\LightBlog\Blog\Storage\Eloquent\Post;
 
 class BlogPostRepository implements BlogPostRepositoryInterface
 {
     protected $post;
 
-    public function __construct(BlogPost $post)
+    public function __construct(Post $post)
     {
         $this->post = $post;
     }

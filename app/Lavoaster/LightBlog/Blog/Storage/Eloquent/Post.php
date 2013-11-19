@@ -2,7 +2,7 @@
 
 use Lavoaster\LightBlog\Blog\Storage\BlogPostInterface;
 
-class BlogPost extends \Eloquent implements BlogPostInterface
+class Post extends \Eloquent implements BlogPostInterface
 {
     public function getTitle()
     {
