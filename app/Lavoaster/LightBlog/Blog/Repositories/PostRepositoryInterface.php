@@ -19,4 +19,11 @@ interface PostRepositoryInterface
      * @return BlogPostInterface
      */
     public function find($id);
+
+    /**
+     * Returns all posts
+     *
+     * @return BlogPostInterface[]
+     */
+    public function all();
 }

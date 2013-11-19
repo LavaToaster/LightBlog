@@ -34,4 +34,16 @@ class PostRepository implements PostRepositoryInterface
     {
         return $this->post->find($id);
     }
+
+    /**
+     * Returns all posts
+     *
+     * @return BlogPostInterface[]
+     */
+    public function all()
+    {
+        return $this->post->all();
+    }
+
+
 }
