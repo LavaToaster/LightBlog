@@ -48,15 +48,15 @@
                             <h4 class="modal-title">Log In</h4>
                         </div>
                         <div class="modal-body">
-                            <form role="form">
+                            <form id="login-form" role="form">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="text" class="form-control" id="email">
+                                    <input type="email" class="form-control" id="email" name="email">
                                 </div>
                                 <div class="form-group">
                                     <a class="pull-right" href="#">Forgot password?</a>
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" id="password">
+                                    <input type="password" class="form-control" id="password" name="password">
                                 </div>
                                 <div class="checkbox pull-right">
                                     <label> <input type="checkbox"> Remember me </label>
