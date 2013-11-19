@@ -1,6 +1,6 @@
 <?php namespace Lavoaster\LightBlog\User\Storage;
 
-interface UserInterface
+interface UserInterface extends \Illuminate\Auth\UserInterface
 {
     public function getId();
 

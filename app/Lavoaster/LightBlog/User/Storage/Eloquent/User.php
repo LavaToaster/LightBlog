@@ -34,17 +34,31 @@ class User extends \Eloquent implements \Lavoaster\LightBlog\User\Storage\UserIn
 
     public function getName()
     {
-        // TODO: Implement getName() method.
+        return $this->name;
     }
 
     public function setName($name)
     {
-        // TODO: Implement setName() method.
+        $this->name = $name;
     }
 
-    public function save()
+    /**
+     * Get the unique identifier for the user.
+     *
+     * @return mixed
+     */
+    public function getAuthIdentifier()
     {
-        // TODO: Implement save() method.
+        return 'username';
     }
 
+    /**
+     * Get the password for the user.
+     *
+     * @return string
+     */
+    public function getAuthPassword()
+    {
+        return $this->getPassword();
+    }
 }
