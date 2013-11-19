@@ -1,5 +1,7 @@
 <?php namespace Lavoaster\LightBlog\Blog\Storage;
 
+use Lavoaster\LightBlog\User\Storage\UserInterface;
+
 interface BlogPostInterface
 {
 
@@ -13,7 +15,7 @@ interface BlogPostInterface
 
     public function getAuthor();
 
-    public function setAuthor($author);
+    public function setAuthor(UserInterface $author);
 
     public function getPublishDate();
 

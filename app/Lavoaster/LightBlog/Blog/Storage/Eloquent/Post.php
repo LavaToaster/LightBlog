@@ -1,6 +1,7 @@
 <?php namespace Lavoaster\LightBlog\Blog\Storage\Eloquent;
 
 use Lavoaster\LightBlog\Blog\Storage\BlogPostInterface;
+use Lavoaster\LightBlog\User\Storage\UserInterface;
 
 class Post extends \Eloquent implements BlogPostInterface
 {
@@ -29,9 +30,9 @@ class Post extends \Eloquent implements BlogPostInterface
         return $this->author;
     }
 
-    public function setAuthor($author)
+    public function setAuthor(UserInterface $author)
     {
-        $this->author = $author;
+        $this->user_id = $author->getId();
     }
 
     public function getPublishDate()
