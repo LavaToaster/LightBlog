@@ -115,6 +115,7 @@ return array(
         'Illuminate\Workbench\WorkbenchServiceProvider',
 
         'Lavoaster\LightBlog\Blog\BlogServiceProvider',
+        'Lavoaster\LightBlog\User\UserServiceProvider',
 
     ),
 
