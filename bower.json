@@ -1,0 +1,13 @@
+{
+    "name": "LightBlog",
+    "version": "0.0.1",
+    "homepage": "https://github.com/Lavoaster/LightBlog",
+    "authors": [
+        "Adam Lavin <adam@lavoaster.co.uk>"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "jquery": "2.0.*",
+        "bootstrap": "3.0.*"
+    }
+}
