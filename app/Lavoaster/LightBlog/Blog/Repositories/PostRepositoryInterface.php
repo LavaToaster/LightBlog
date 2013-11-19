@@ -2,7 +2,7 @@
 
 use Lavoaster\LightBlog\Blog\Storage\BlogPostInterface;
 
-interface BlogPostRepositoryInterface
+interface PostRepositoryInterface
 {
     /**
      * Create a blog post

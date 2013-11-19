@@ -1,10 +1,10 @@
 <?php namespace Lavoaster\LightBlog\Blog\Repositories\Eloquent;
 
-use Lavoaster\LightBlog\Blog\Repositories\BlogPostRepositoryInterface;
+use Lavoaster\LightBlog\Blog\Repositories\PostRepositoryInterface;
 use Lavoaster\LightBlog\Blog\Storage\BlogPostInterface;
 use Lavoaster\LightBlog\Blog\Storage\Eloquent\Post;
 
-class BlogPostRepository implements BlogPostRepositoryInterface
+class PostRepository implements PostRepositoryInterface
 {
     protected $post;
 
