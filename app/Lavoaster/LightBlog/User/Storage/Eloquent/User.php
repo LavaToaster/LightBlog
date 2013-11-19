@@ -2,6 +2,10 @@
 
 class User extends \Eloquent implements \Lavoaster\LightBlog\User\Storage\UserInterface
 {
+    public function getId()
+    {
+        return $this->id;
+    }
 
     public function getEmail()
     {
