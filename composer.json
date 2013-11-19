@@ -16,8 +16,8 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php"
 		],
-        "PSR-0": {
-            "Lavoaster/LightBlog": "app/"
+        "psr-0": {
+            "Lavoaster\\LightBlog": "app/"
         }
 	},
 	"scripts": {
