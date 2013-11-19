@@ -5,11 +5,11 @@ use Lavoaster\LightBlog\Blog\Repositories\PostRepositoryInterface;
 class BlogController extends \BaseController
 {
 
-    protected $blogs;
+    protected $post;
 
-    public function __construct(PostRepositoryInterface $blogs)
+    public function __construct(PostRepositoryInterface $post)
     {
-        $this->blogs = $blogs;
+        $this->post = $post;
     }
 
     public function index()
