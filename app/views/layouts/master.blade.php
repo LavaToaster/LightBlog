@@ -10,6 +10,8 @@
     </head>
     <body>
 
+        <div class="user-login"><a href="#" data-toggle="modal" data-target="#loginBox" title="Log in"><span class="glyphicon glyphicon-user"></span></a></div>
+
         <div class="brand">{{ $title }}</div>
         <div class="address-bar">{{ $tagline }}</div>
 
@@ -36,6 +38,38 @@
         </nav>
 
         @yield('content')
+
+        <aside id="loginBox" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog login-modal">
+                <div class="row">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Log In</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <a class="pull-right" href="#">Forgot password?</a>
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password">
+                                </div>
+                                <div class="checkbox pull-right">
+                                    <label> <input type="checkbox"> Remember me </label>
+                                </div>
+                                <button type="submit" class="btn btn btn-primary">
+                                    Log In
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
 
         <!-- Is a footer really needed? -->
         <!--<footer>

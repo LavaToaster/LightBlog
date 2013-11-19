@@ -30,7 +30,8 @@ hr {
 }
 
 .brand,
-.address-bar {
+.address-bar,
+.user-login {
     display: none;
 }
 
@@ -100,6 +101,24 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
+
+    .login-modal {
+        width: 300px;
+    }
+
+    .user-login {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        float: right;
+        color: #ffffcc;
+    }
+
+    .user-login > a {
+        color: #fff;
+    }
+
 
     .brand {
         display: inherit;
