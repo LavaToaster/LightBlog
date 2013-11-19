@@ -86,5 +86,21 @@
         <script src="{{ asset('components/underscore/underscore.js') }}"></script>
         <script src="{{ asset('components/Eventable/eventable.js') }}"></script>
         <script src="{{ asset('components/sir-trevor-js/sir-trevor.js') }}"></script>
+        <script>
+            var Site = {
+                url:  '{{ Config::get("app.url") }}',
+                csrf: '{{ csrf_token() }}'
+            };
+
+            $.ajaxSetup({
+                dataType: "json",
+                beforeSend: function(xhr, settings) {
+                    if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                        // Only send the token to relative URLs i.e. locally.
+                        xhr.setRequestHeader("X-CSRF-Token", Site.csrf);
+                    }
+                }
+            });
+        </script>
     </body>
 </html>
