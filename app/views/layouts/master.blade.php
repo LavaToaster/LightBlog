@@ -104,6 +104,8 @@
                     }
                 }
             });
+
+            new SirTrevor.Editor({ el: $('.js-st-instance') });
         </script>
     </body>
 </html>

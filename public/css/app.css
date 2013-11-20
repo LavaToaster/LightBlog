@@ -72,6 +72,10 @@ hr {
     padding: 30px 15px;
 }
 
+.editor {
+    margin: 10px 0;
+}
+
 .intro-text {
     text-transform: uppercase;
     letter-spacing: 1px;
