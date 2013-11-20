@@ -62,7 +62,7 @@
                                     <input type="password" class="form-control" id="password" name="password">
                                 </div>
                                 <div class="checkbox pull-right">
-                                    <label> <input type="checkbox"> Remember me </label>
+                                    <label> <input type="checkbox" name="rememberme" value="1"> Remember me </label>
                                 </div>
                                 <button type="submit" class="btn btn btn-primary">
                                     Log In
