@@ -11,7 +11,9 @@ sudo add-apt-repository -y ppa:ondrej/php5
 
 sudo apt-get update
 
-sudo apt-get install -y nginx php5-fpm php5-cli php5-curl php5-gd php5-imagick php5-mcrypt php5-mysql mysql-server mysql-client git-core
+sudo apt-get install -y nginx php5-fpm php5-cli php5-curl php5-gd php5-imagick php5-mcrypt php5-mysql mysql-server mysql-client git-core npm
+
+npm install -g bower
 
 sudo apt-get install -y php5-xdebug
 
@@ -30,7 +32,7 @@ sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/fpm/php.ini
 sed -i "s/listen = 127.0.0.1:9000/listen = \/tmp\/php5-fpm.sock/" /etc/php5/fpm/pool.d/www.conf
 
 sudo rm /etc/nginx/sites-available/default
-sudo cp /vagrant/.kapow/vhost /etc/nginx/sites-available/default
+sudo cp /vagrant/vhost /etc/nginx/sites-available/default
 
 sudo service php5-fpm restart
 sudo service nginx restart
@@ -39,6 +41,8 @@ mysql --user=root --password="root" -Bse "CREATE DATABASE IF NOT EXISTS laravel 
 
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
+
+bower install
 
 echo "--- Installing zsh ---"
 apt-get install -y zsh
