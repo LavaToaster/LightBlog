@@ -4,6 +4,7 @@
     "license": "MIT",
     "require": {
         "laravel/framework": "4.0.*",
+        "thujohn/twitter": "dev-master"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "1.*"
