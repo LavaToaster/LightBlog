@@ -48,6 +48,7 @@
                             <h4 class="modal-title">Log In</h4>
                         </div>
                         <div class="modal-body">
+                            <div id="login-errors"></div>
                             <form id="login-form" role="form">
                                 <div class="form-group">
                                     <label for="email">Email</label>
