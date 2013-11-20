@@ -14,7 +14,7 @@
         @if(!isset($user))
             <div class="user-login"><a href="#" data-toggle="modal" data-target="#loginBox" title="Log in"><span class="glyphicon glyphicon-user"></span></a></div>
         @else
-            <div class="user-login">Welcome {{ $user->getName() }}</div>
+            <div class="user-login user-logged-in">Welcome {{ $user->getName() }} <a href="{{ URL::route('user.logout', ['_token' => csrf_token()]) }}" title="Logout"><span class="glyphicon glyphicon-off"></span></a></div>
         @endif
 
 
