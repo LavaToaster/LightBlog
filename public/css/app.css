@@ -106,6 +106,10 @@ footer p {
         width: 300px;
     }
 
+    .login-alert {
+        display: block;
+    }
+
     .user-login {
         display: block;
         position: absolute;
