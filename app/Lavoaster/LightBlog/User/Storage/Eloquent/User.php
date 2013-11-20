@@ -52,7 +52,7 @@ class User extends \Eloquent implements \Lavoaster\LightBlog\User\Storage\UserIn
      */
     public function getAuthIdentifier()
     {
-        return 'username';
+        return $this->getId();
     }
 
     /**
