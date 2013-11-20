@@ -93,6 +93,7 @@
         <script src="{{ asset('components/underscore/underscore.js') }}"></script>
         <script src="{{ asset('components/Eventable/eventable.js') }}"></script>
         <script src="{{ asset('components/sir-trevor-js/sir-trevor.js') }}"></script>
+        <script src="{{ asset('js/blog.js') }}"></script>
         <script src="{{ asset('js/user.js') }}"></script>
         <script>
             var Site = {
