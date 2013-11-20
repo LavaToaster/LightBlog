@@ -5,7 +5,7 @@
         <!-- Dummy Add post box -->
         <div class="box">
             <div class="col-lg-12 text-center">
-                <form>
+                <form id="new-post" method="post">
                     <h2><span id="post-title" contenteditable="true">Test</span><br><small id="post-date">{{ \Carbon\Carbon::now() }}</small></h2>
 
                     <div class="editor">
