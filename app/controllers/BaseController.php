@@ -16,6 +16,10 @@ class BaseController extends Controller {
             $this->layout = View::make($this->layout);
             $this->layout->title = Config::get('blog.name');
             $this->layout->tagline = Config::get('blog.tagline');
+
+            if(\Auth::check()) {
+                $this->layout->user = \Auth::getUser();
+            }
         }
     }
 
