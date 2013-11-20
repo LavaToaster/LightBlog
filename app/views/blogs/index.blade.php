@@ -2,8 +2,8 @@
 <div class="container">
 
     <div class="row">
+        @foreach($posts as $post)
         <div class="box">
-            @foreach($posts as $post)
             <div class="col-lg-12 text-center">
                 <img class="img-responsive img-border img-full" src="img/slide-3.jpg">
                 <h2>{{ $post->getTitle() }}<br><small>{{ $post->getPublishDate() }}</small></h2>
@@ -11,8 +11,8 @@
                 <a href="#" class="btn btn-default btn-lg">Read More</a>
                 <hr>
             </div>
-            @endforeach
         </div>
+        @endforeach
     </div>
 </div>
 @endsection
