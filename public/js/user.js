@@ -33,6 +33,7 @@ var User = {};
     };
 
     User.initialise = function(user) {
+        window.location.reload();
         // TODO: Init frontend for user display
     };
 
