@@ -95,6 +95,7 @@
         <script src="{{ asset('components/sir-trevor-js/sir-trevor.js') }}"></script>
         <script src="{{ asset('js/blog.js') }}"></script>
         <script src="{{ asset('js/user.js') }}"></script>
+        <script src="{{ asset('js/editor.js') }}"></script>
         <script>
             var Site = {
                 url:  '{{ Config::get("app.url") }}',
@@ -110,8 +111,6 @@
                     }
                 }
             });
-
-            new SirTrevor.Editor({ el: $('.js-st-instance') });
         </script>
     </body>
 </html>
