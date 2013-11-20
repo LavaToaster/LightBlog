@@ -28,7 +28,7 @@ return array(
     |
     */
 
-    'model' => 'User',
+    'model' => 'Lavoaster\LightBlog\User\Storage\Eloquent\User',
 
     /*
     |--------------------------------------------------------------------------
