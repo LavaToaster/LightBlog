@@ -11,8 +11,12 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
+        @if(!isset($user))
+            <div class="user-login"><a href="#" data-toggle="modal" data-target="#loginBox" title="Log in"><span class="glyphicon glyphicon-user"></span></a></div>
+        @else
+            <div class="user-login">Welcome {{ $user->getName() }}</div>
+        @endif
 
-        <div class="user-login"><a href="#" data-toggle="modal" data-target="#loginBox" title="Log in"><span class="glyphicon glyphicon-user"></span></a></div>
 
         <div class="brand">{{ $title }}</div>
         <div class="address-bar">{{ $tagline }}</div>
