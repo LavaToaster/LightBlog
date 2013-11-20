@@ -16,4 +16,5 @@ class BlogController extends \BaseController
     {
         $this->layout->content = \View::make('blogs.index')->with('posts', $this->post->all());
     }
+
 }
