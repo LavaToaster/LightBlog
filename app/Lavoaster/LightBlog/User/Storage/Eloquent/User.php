@@ -2,6 +2,9 @@
 
 class User extends \Eloquent implements \Lavoaster\LightBlog\User\Storage\UserInterface
 {
+
+    protected $hidden = ['password'];
+
     public function getId()
     {
         return $this->id;
