@@ -32,3 +32,8 @@
 {
     border-color: #000;
 }
+
+.st-block__delete-label
+{
+    margin-bottom: 0;
+}
