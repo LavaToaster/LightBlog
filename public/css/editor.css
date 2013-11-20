@@ -1,0 +1,28 @@
+.st-block__inner ::-moz-selection,
+.st-block__inner ::selection,
+.st-block-controls__top:hover:before,
+.st-block-control:hover,
+.st-block__inner:hover,
+.st-block--with-plus:after,
+.st-block__upload-container:hover .st-upload-btn,
+.st-block-positioner__title,
+.st-block-ui-btn:hover
+{
+    background: #000;
+}
+
+.st-block-ui-btn,
+.st-format-btn:hover,
+.st-format-btn--is-active
+{
+    color: #000;
+}
+
+.st-block__messages,
+.st-block-positioner,
+.st-block-positioner:after,
+.st-block-positioner__title,
+.st-block-ui-btn
+{
+    border-color: #000;
+}
