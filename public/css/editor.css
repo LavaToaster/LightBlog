@@ -1,5 +1,10 @@
-.st-block__inner ::-moz-selection,
-.st-block__inner ::selection,
+.st-block__inner ::-moz-selection {
+    background: #000;
+}
+.st-block__inner ::selection {
+    background: #000;
+}
+
 .st-block--with-plus:after,
 .st-block__upload-container:hover .st-upload-btn,
 .st-block-positioner__title,
