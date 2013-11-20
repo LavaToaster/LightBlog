@@ -34,7 +34,7 @@ class UserController extends \BaseController
         if(\Auth::attempt(['email' => \Input::input('email'), 'password' => \Input::input('password')])) {
             return [
                 'success' => true,
-                'user' => \Auth::getUser()
+                'user' => \Auth::getUser()->toArray()
             ];
         }
 
