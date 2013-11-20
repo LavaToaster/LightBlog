@@ -23,7 +23,8 @@ interface PostRepositoryInterface
     /**
      * Returns all posts
      *
+     * @param string $order
      * @return BlogPostInterface[]
      */
-    public function all();
+    public function all($order = 'asc');
 }

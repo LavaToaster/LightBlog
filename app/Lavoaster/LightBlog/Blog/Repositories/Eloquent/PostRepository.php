@@ -38,11 +38,12 @@ class PostRepository implements PostRepositoryInterface
     /**
      * Returns all posts
      *
+     * @param string $order
      * @return BlogPostInterface[]
      */
-    public function all()
+    public function all($order = 'asc')
     {
-        return $this->post->all();
+        return $this->post->orderBy('published_at', $order)->get();
     }
 
 
