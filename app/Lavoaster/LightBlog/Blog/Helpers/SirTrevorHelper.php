@@ -30,7 +30,7 @@ class SirTrevorHelper
 
     protected function renderText($data)
     {
-        return $this->parser->transformMarkdown($data['text']);
+        return nl2br($this->parser->transformMarkdown($data['text']));
     }
 
     protected function renderTweet($data)
