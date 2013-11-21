@@ -12,6 +12,11 @@ class PostController extends \BaseController
         $this->post = $post;
     }
 
+    public function create()
+    {
+        return \View::make('blogs.create');
+    }
+
     public function store()
     {
         $input = \Input::only('post-title', 'post-content');

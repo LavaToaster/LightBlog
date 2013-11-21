@@ -6,6 +6,7 @@ Route::group(['prefix' => '/'], function () {
 
 Route::group(['prefix' => 'post'], function () {
     Route::post('/', ['as' => 'post.store', 'uses' => 'Lavoaster\LightBlog\Blog\Controllers\PostController@store']);
+    Route::get('create', ['as' => 'post.create', 'uses' => 'Lavoaster\LightBlog\Blog\Controllers\PostController@create']);
 });
 
 Route::group(['prefix' => 'editor'], function () {
