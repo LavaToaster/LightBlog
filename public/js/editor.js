@@ -1,5 +1,10 @@
+var Editor = {};
+
 (function() {
-    new SirTrevor.Editor({ el: $('.js-st-instance') });
+
+    Editor.bind = function() {
+        new SirTrevor.Editor({ el: $('.js-st-instance') });
+    };
 
     SirTrevor.setDefaults({
         uploadUrl: "/editor/attachment"
