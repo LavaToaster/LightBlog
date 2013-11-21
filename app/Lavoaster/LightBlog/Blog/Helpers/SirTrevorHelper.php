@@ -34,22 +34,33 @@ class SirTrevorHelper
 
     protected function renderTweet($data)
     {
-        return '';
+        return \View::make('editor.tweet')->with('tweet', $data);
     }
 
     protected function renderList($data)
     {
-        return '';
+        return $this->parser->transformMarkdown($data['text']);
     }
 
     protected function renderHeading($data)
     {
-        return '';
+        return '<h2>' . $data['text'] . '</h2>';
     }
 
     protected function renderVideo($data)
     {
-        return '';
+        if($data['source'] == 'youtube') {
+            return '<iframe src="//www.youtube.com/embed/' . $data['remote_id'] . '" width="580" height="320" frameborder="0" allowfullscreen></iframe>';
+        }
+
+        if($data['source'] == 'vimeo') {
+            return '<iframe src="//player.vimeo.com/video/' . $data['remote_id'] . '?title=0&byline=0" width="580" height="320" frameborder="0"></iframe>';
+        }
+    }
+
+    protected function renderQuote($data)
+    {
+        return '<blockquote><p>' . $data['text'] . '</p><cite>' . $data['cite'] . '</cite></blockquote>';
     }
 
     protected function renderImage($data)
