@@ -3,6 +3,7 @@
 use Lavoaster\LightBlog\Blog\Repositories\PostRepositoryInterface;
 use Lavoaster\LightBlog\Blog\Storage\BlogPostInterface;
 use Lavoaster\LightBlog\Blog\Storage\Eloquent\Post;
+use Lavoaster\LightBlog\User\Storage\UserInterface;
 
 class PostRepository implements PostRepositoryInterface
 {
@@ -17,11 +18,12 @@ class PostRepository implements PostRepositoryInterface
      * Create a blog post
      *
      * @param array $attributes
+     * @param \Lavoaster\LightBlog\User\Storage\UserInterface $author
      * @return BlogPostInterface
      */
-    public function create(array $attributes)
+    public function create(array $attributes, UserInterface $author)
     {
-        return $this->post->create($attributes);
+        return $this->post->create($attributes + ['user_id' => $author->getId()]);
     }
 
     /**
