@@ -5,6 +5,8 @@ use Lavoaster\LightBlog\User\Storage\UserInterface;
 
 class Post extends \Eloquent implements BlogPostInterface
 {
+    protected $guarded = [];
+
     public function getTitle()
     {
         return $this->title;
