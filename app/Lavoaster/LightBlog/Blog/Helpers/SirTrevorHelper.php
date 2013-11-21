@@ -66,6 +66,6 @@ class SirTrevorHelper
 
     protected function renderImage($data)
     {
-        return '<img src="' . asset('uploads/' . $data['file']) . '">';
+        return '<img class="img-responsive img-border" src="' . asset('uploads/' . $data['file']) . '">';
     }
 }
