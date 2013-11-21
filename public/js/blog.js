@@ -12,7 +12,7 @@ var Blog = {};
         $.ajax({
             type: 'post',
             url: '/post',
-            data: $('#new-post').serialize() + '&title=' + $('#post-title').html(),
+            data: $('#new-post').serialize() + '&post-title=' + $('#post-title').html(),
             success: function(data) {
                 // TODO: Something
             }
