@@ -15,6 +15,7 @@ class SirTrevorHelper
 
     public function setContent($content)
     {
+        $this->html = '';
         $this->content = json_decode($content, true);
     }
 
