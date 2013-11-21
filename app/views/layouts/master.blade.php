@@ -112,5 +112,6 @@
                 }
             });
         </script>
+        <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </body>
 </html>
