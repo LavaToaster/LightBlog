@@ -20,10 +20,8 @@ class BlogController extends \BaseController
         $sirTrevor = new SirTrevorHelper(new \dflydev\markdown\MarkdownParser());
 
         foreach($posts as $post) {
-            if (str_contains($post->getContent(), '{')) {
-                $sirTrevor->setContent($post->getContent());
-                $post->setContent($sirTrevor->toHtml());
-            }
+            $sirTrevor->setContent($post->getContent());
+            $post->setContent($sirTrevor->toHtml());
         }
 
         $this->layout->content = \View::make('blogs.index')->with('posts', $posts);
