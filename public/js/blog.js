@@ -14,7 +14,7 @@ var Blog = {};
             url: '/post',
             data: $('#new-post').serialize() + '&post-title=' + $('#post-title').html(),
             success: function(data) {
-                // TODO: Something
+                window.location.reload();
             }
         });
     };
