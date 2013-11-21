@@ -1,9 +1,20 @@
 var Blog = {};
 
 (function() {
-    Blog.addPost = function(event) {
-        event.preventDefault();
+    Blog.newPost = function(event) {
+        $.ajax({
+            type: 'get',
+            url: '/post/create',
+            success: function(html) {
 
+                $('#posts').prepend(html);
+                $('#new-post').fadeOut();
+
+                $('#post-form').submit(Blog.createPost);
+                Editor.bind();
+            },
+            dataType: 'html'
+        });
     };
 
     Blog.createPost = function(event) {
@@ -19,5 +30,6 @@ var Blog = {};
         });
     };
 
-    $('#new-post').submit(Blog.createPost);
+    $('#new-post').click(Blog.newPost);
+
 })();
