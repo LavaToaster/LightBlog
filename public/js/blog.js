@@ -25,6 +25,8 @@ var Blog = {};
     Blog.createPost = function(event) {
         event.preventDefault();
 
+        Editor.triggerSubmission(); // Nudge Sir Trevor to serialize the data
+
         $.ajax({
             type: 'post',
             url: '/post',
