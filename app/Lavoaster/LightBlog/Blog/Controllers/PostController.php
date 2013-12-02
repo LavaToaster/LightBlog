@@ -21,6 +21,14 @@ class PostController extends \BaseController
     {
         $input = \Input::only('post-title', 'post-content');
 
+        if(empty($input['post-title'])) {
+            return \Response::json(['success' => false], 400);
+        };
+
+        if(empty($input['post-content'])) {
+            return \Response::json(['success' => false], 400);
+        };
+
         $post = $this->post->create([
             'title' => $input['post-title'],
             'content' => $input['post-content'],
