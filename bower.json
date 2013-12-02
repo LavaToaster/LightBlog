@@ -9,7 +9,8 @@
     "dependencies": {
         "jquery": "2.0.*",
         "bootstrap": "3.0.*",
-        "sir-trevor-js": "0.3.*"
+        "sir-trevor-js": "0.3.*",
+        "animate.css": "v2.1.0"
     },
     "resolutions": {
         "jquery": "2.0.*"
