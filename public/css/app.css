@@ -104,6 +104,20 @@ footer p {
     padding: 50px 0;
 }
 
+
+.box.drawer {
+    margin: 0 auto;
+    width: 75px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.box.control-bar {
+    margin: 0;
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
 
     .login-modal {
@@ -164,6 +178,7 @@ footer p {
 
     .navbar {
         border-radius: 0;
+        margin-bottom: 0;
     }
 
     .navbar-header {
