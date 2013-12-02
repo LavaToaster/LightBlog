@@ -5,6 +5,10 @@ var Editor = {};
     Editor.bind = function() {
         new SirTrevor.Editor({ el: $('.js-st-instance') });
     };
+	
+    Editor.triggerSubmission = function() {
+        SirTrevor.triggerSubmission();
+    };
 
     SirTrevor.setDefaults({
         uploadUrl: "/editor/attachment"
