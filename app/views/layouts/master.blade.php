@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ $title }}</title>
+        <link href="{{ asset('components/animate.css/animate.css') }}" rel="stylesheet">
         <link href="{{ asset('components/bootstrap/dist/css/bootstrap.css') }}" rel="stylesheet">
         <link href="{{ asset('components/sir-trevor-js/sir-trevor-icons.css') }}" rel="stylesheet">
         <link href="{{ asset('components/sir-trevor-js/sir-trevor.css') }}" rel="stylesheet">
