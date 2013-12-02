@@ -28,12 +28,20 @@ var User = {};
                 if( $errors.wrong ) {
                     $errorBox.append('<span class="alert alert-danger login-alert">' + $errors.wrong[0] + '</span>');
                 }
+
+                if( $errors ) {
+                    $('.login-modal').addClass('shake animated');
+                    setTimeout(function() {
+                        $('.login-modal').removeClass('shake animated');
+                    }, 1000);
+                }
             }
         });
     };
 
     User.initialise = function(user) {
         window.location.reload();
+        $('.login-modal').addClass('tada animated');
         // TODO: Init frontend for user display
     };
 
