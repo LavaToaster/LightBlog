@@ -1,15 +1,19 @@
 <?php namespace Lavoaster\LightBlog\Blog\Controllers;
 
 use Lavoaster\LightBlog\Blog\Repositories\PostRepositoryInterface;
+use Lavoaster\LightBlog\Blog\Helpers\SirTrevorHelper;
+
 
 class PostController extends \BaseController
 {
 
     protected $post;
+    protected $sirTrevor;
 
-    public function __construct(PostRepositoryInterface $post)
+    public function __construct(PostRepositoryInterface $post, SirTrevorHelper $sirTrevor)
     {
         $this->post = $post;
+        $this->sirTrevor = $sirTrevor;
     }
 
     public function create()
@@ -35,6 +39,12 @@ class PostController extends \BaseController
             'published_at' => \Carbon\Carbon::now()
         ], \Auth::getUser());
 
-        return \Response::json(['success' => true]);
+        $this->sirTrevor->setContent($post->getContent());
+        $post->setContent($this->sirTrevor->toHtml());
+
+        return \Response::json([
+            'success' => true,
+            'html' => (string) \View::make('blogs.post')->with('post', $post)
+        ]);
     }
 }
