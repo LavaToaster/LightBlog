@@ -7,6 +7,11 @@ class Post extends \Eloquent implements BlogPostInterface
 {
     protected $guarded = [];
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
     public function getTitle()
     {
         return $this->title;

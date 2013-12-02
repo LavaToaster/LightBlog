@@ -5,6 +5,8 @@ use Lavoaster\LightBlog\User\Storage\UserInterface;
 interface BlogPostInterface
 {
 
+    public function getId();
+
     public function getTitle();
 
     public function setTitle($title);
