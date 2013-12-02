@@ -30,9 +30,19 @@ var Blog = {};
         $.ajax({
             type: 'post',
             url: '/post',
-            data: $('#new-post').serialize() + '&post-title=' + $('#post-title').html(),
+            data: $('#post-form').serialize() + '&post-title=' + $('#post-title').html(),
             success: function(data) {
-                window.location.reload();
+                $createPost.addClass('bounceOut animated');
+                setTimeout(function() {
+                    $createPost.remove();
+                    $('#posts').prepend($(data.html).find('div').addClass('bounceIn animated').html());
+                }, 1000);
+            },
+            error: function(request) {
+                $createPost.addClass('shake animated');
+                setTimeout(function() {
+                   $createPost.removeClass('bounceIn animated');
+                }, 1000);
             }
         });
     };
