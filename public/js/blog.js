@@ -32,4 +32,7 @@ var Blog = {};
 
     $('#new-post').click(Blog.newPost);
 
+    $('#drawer').click(function() {
+        $('#control-bar').slideToggle();
+    });
 })();
