@@ -42,6 +42,7 @@ var Blog = {};
                 setTimeout(function() {
                     $createPost.remove();
                     $('#posts').prepend($(data.html).find('div').addClass('bounceIn animated').html());
+                    twttr.widgets.load();
                 }, 1000);
             },
             error: function(request) {
