@@ -12,17 +12,23 @@ var Blog = {};
             url: '/post/create',
             success: function(html) {
 
-                $('#posts').prepend(html);
+                $('#posts').prepend($(html).addClass('bounceIn animated'));
                 $('#control-bar').slideUp();
 
                 $('#post-form').submit(Blog.createPost);
                 Editor.bind();
+
+                setTimeout(function() {
+                    $('#create-post').removeClass('bounceIn animated');
+                }, 1000);
             },
             dataType: 'html'
         });
     };
 
     Blog.createPost = function(event) {
+        var $createPost = $('#create-post');
+
         event.preventDefault();
 
         Editor.triggerSubmission(); // Nudge Sir Trevor to serialize the data
