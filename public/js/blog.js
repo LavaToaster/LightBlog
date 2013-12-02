@@ -2,13 +2,18 @@ var Blog = {};
 
 (function() {
     Blog.newPost = function(event) {
+        if($('#create-post').length) {
+            $('#control-bar').slideUp();
+            return;
+        }
+
         $.ajax({
             type: 'get',
             url: '/post/create',
             success: function(html) {
 
                 $('#posts').prepend(html);
-                $('#new-post').fadeOut();
+                $('#control-bar').slideUp();
 
                 $('#post-form').submit(Blog.createPost);
                 Editor.bind();
