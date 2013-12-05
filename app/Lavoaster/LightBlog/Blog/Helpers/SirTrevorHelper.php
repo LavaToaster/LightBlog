@@ -5,27 +5,22 @@ use dflydev\markdown\MarkdownParser;
 class SirTrevorHelper
 {
     protected $parser;
-    protected $content;
-    protected $html;
 
     public function __construct(MarkdownParser $parser)
     {
         $this->parser = $parser;
     }
 
-    public function setContent($content)
+    public function render($content)
     {
-        $this->html = '';
-        $this->content = json_decode($content, true);
-    }
+        $content = json_decode($content, true);
+        $html = '';
 
-    public function toHtml()
-    {
-        foreach($this->content['data'] as $block) {
-            $this->html .= $this->{'render'.ucfirst($block['type'])}($block['data']) . "\n";
+        foreach($content['data'] as $block) {
+            $html .= $this->{'render'.ucfirst($block['type'])}($block['data']) . "\n";
         }
 
-        return $this->html;
+        return $html;
     }
 
     protected function renderText($data)
