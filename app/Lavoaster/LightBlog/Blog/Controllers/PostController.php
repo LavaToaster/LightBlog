@@ -44,4 +44,11 @@ class PostController extends \BaseController
             'html' => (string) \View::make('blogs.post')->with('post', $post)
         ]);
     }
+
+    public function show($id)
+    {
+        $post = $this->post->find($id);
+
+        $this->layout->content = \View::make('blogs.show')->with('post', $post);
+    }
 }
