@@ -1,6 +1,6 @@
 <?php namespace Lavoaster\LightBlog\Blog\Repositories;
 
-use Lavoaster\LightBlog\Blog\Storage\BlogPostInterface;
+use Lavoaster\LightBlog\Blog\Storage\PostInterface;
 use Lavoaster\LightBlog\User\Storage\UserInterface;
 
 interface PostRepositoryInterface
@@ -10,7 +10,7 @@ interface PostRepositoryInterface
      *
      * @param array $attributes
      * @param \Lavoaster\LightBlog\User\Storage\UserInterface $author
-     * @return BlogPostInterface
+     * @return PostInterface
      */
     public function create(array $attributes, UserInterface $author);
 
@@ -18,7 +18,7 @@ interface PostRepositoryInterface
      * Find a blog post by its id
      *
      * @param int $id
-     * @return BlogPostInterface
+     * @return PostInterface
      */
     public function find($id);
 
@@ -26,7 +26,7 @@ interface PostRepositoryInterface
      * Returns all posts
      *
      * @param string $order
-     * @return BlogPostInterface[]
+     * @return PostInterface[]
      */
     public function all($order = 'asc');
 }

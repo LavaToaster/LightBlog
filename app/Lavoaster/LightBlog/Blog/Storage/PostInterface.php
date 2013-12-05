@@ -2,7 +2,7 @@
 
 use Lavoaster\LightBlog\User\Storage\UserInterface;
 
-interface BlogPostInterface
+interface PostInterface
 {
 
     public function getId();

@@ -1,9 +1,9 @@
 <?php namespace Lavoaster\LightBlog\Blog\Storage\Eloquent;
 
-use Lavoaster\LightBlog\Blog\Storage\BlogPostInterface;
+use Lavoaster\LightBlog\Blog\Storage\PostInterface;
 use Lavoaster\LightBlog\User\Storage\UserInterface;
 
-class Post extends \Eloquent implements BlogPostInterface
+class Post extends \Eloquent implements PostInterface
 {
     protected $guarded = [];
 

@@ -1,7 +1,7 @@
 <?php namespace Lavoaster\LightBlog\Blog\Repositories\Eloquent;
 
 use Lavoaster\LightBlog\Blog\Repositories\PostRepositoryInterface;
-use Lavoaster\LightBlog\Blog\Storage\BlogPostInterface;
+use Lavoaster\LightBlog\Blog\Storage\PostInterface;
 use Lavoaster\LightBlog\Blog\Storage\Eloquent\Post;
 use Lavoaster\LightBlog\User\Storage\UserInterface;
 
@@ -19,7 +19,7 @@ class PostRepository implements PostRepositoryInterface
      *
      * @param array $attributes
      * @param \Lavoaster\LightBlog\User\Storage\UserInterface $author
-     * @return BlogPostInterface
+     * @return PostInterface
      */
     public function create(array $attributes, UserInterface $author)
     {
@@ -30,7 +30,7 @@ class PostRepository implements PostRepositoryInterface
      * Find a blog post by its id
      *
      * @param int $id
-     * @return BlogPostInterface
+     * @return PostInterface
      */
     public function find($id)
     {
@@ -41,7 +41,7 @@ class PostRepository implements PostRepositoryInterface
      * Returns all posts
      *
      * @param string $order
-     * @return BlogPostInterface[]
+     * @return PostInterface[]
      */
     public function all($order = 'asc')
     {
