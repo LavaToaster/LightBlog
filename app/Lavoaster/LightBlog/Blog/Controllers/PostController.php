@@ -39,9 +39,6 @@ class PostController extends \BaseController
             'published_at' => \Carbon\Carbon::now()
         ], \Auth::getUser());
 
-        $this->sirTrevor->setContent($post->getContent());
-        $post->setContent($this->sirTrevor->toHtml());
-
         return \Response::json([
             'success' => true,
             'html' => (string) \View::make('blogs.post')->with('post', $post)

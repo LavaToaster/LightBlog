@@ -7,6 +7,8 @@ class Post extends \Eloquent implements PostInterface
 {
     protected $guarded = [];
 
+    public $presenter = 'Lavoaster\LightBlog\Blog\Presenters\PostPresenter';
+
     public function getId()
     {
         return $this->id;

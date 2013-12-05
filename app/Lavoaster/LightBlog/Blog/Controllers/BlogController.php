@@ -17,12 +17,6 @@ class BlogController extends \BaseController
     public function index()
     {
         $posts = $this->post->all('desc');
-        $sirTrevor = new SirTrevorHelper(new \dflydev\markdown\MarkdownParser());
-
-        foreach($posts as $post) {
-            $sirTrevor->setContent($post->getContent());
-            $post->setContent($sirTrevor->toHtml());
-        }
 
         $this->layout->content = \View::make('blogs.index')->with('posts', $posts);
     }
