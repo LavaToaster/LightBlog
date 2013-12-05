@@ -122,6 +122,7 @@ return array(
         /* Third Party */
 
         'Thujohn\Twitter\TwitterServiceProvider',
+        'McCool\LaravelAutoPresenter\LaravelAutoPresenterServiceProvider',
 
     ),
 

@@ -5,7 +5,8 @@
     "require": {
         "laravel/framework": "4.0.*",
         "thujohn/twitter": "dev-master",
-        "dflydev/markdown": "v1.0.3"
+        "dflydev/markdown": "v1.0.3",
+        "mccool/laravel-auto-presenter": "*"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "1.*"
