@@ -59,4 +59,15 @@ var Blog = {};
     $('#drawer').click(function() {
         $('#control-bar').slideToggle();
     });
+
+    $('.delete-post').click(function() {
+        var $this = $(this).closest('.box');
+        $this.addClass('bounceOut animated');
+        setTimeout(function() {
+            $this.slideUp('normal', function() {
+                $this.remove();
+            });
+        }, 1000);
+    });
+
 })();

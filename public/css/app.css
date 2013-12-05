@@ -118,6 +118,25 @@ footer p {
     display: none;
 }
 
+.box.post {
+    position: relative;
+}
+
+.post-interaction {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.post-interaction > button {
+    color: rgb(119, 119, 119);
+}
+
+.post-interaction > button:hover {
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
 @media screen and (min-width: 768px) {
 
     .login-modal {
