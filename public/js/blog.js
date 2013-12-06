@@ -54,20 +54,35 @@ var Blog = {};
         });
     };
 
+    Blog.delete = function(event) {
+        var $this = $(this).closest('.box');
+
+        $.ajax({
+            type: 'delete',
+            url: '/post/' + $this.data('post-id'),
+            success: function(data) {
+                $this.addClass('bounceOut animated');
+                setTimeout(function() {
+                    $this.slideUp('normal', function() {
+                        $this.remove();
+                    });
+                }, 1000);
+            },
+            error: function(request) {
+                $this.addClass('shake animated');
+                setTimeout(function() {
+                    $this.removeClass('bounceIn animated');
+                }, 1000);
+            }
+        });
+    };
+
     $('#new-post').click(Blog.newPost);
 
     $('#drawer').click(function() {
         $('#control-bar').slideToggle();
     });
 
-    $('.delete-post').click(function() {
-        var $this = $(this).closest('.box');
-        $this.addClass('bounceOut animated');
-        setTimeout(function() {
-            $this.slideUp('normal', function() {
-                $this.remove();
-            });
-        }, 1000);
-    });
+    $('.delete-post').click(Blog.delete);
 
 })();

@@ -45,6 +45,13 @@ class PostController extends \BaseController
         ]);
     }
 
+    public function delete($id)
+    {
+        return \Response::json([
+            'success' => $this->post->find($id)->delete()
+        ]);
+    }
+
     public function show($id)
     {
         $post = $this->post->find($id);
