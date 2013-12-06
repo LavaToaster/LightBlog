@@ -5,6 +5,8 @@ use Lavoaster\LightBlog\User\Storage\UserInterface;
 interface PostInterface
 {
 
+    public function delete();
+
     public function getId();
 
     public function getTitle();
