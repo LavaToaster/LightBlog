@@ -104,6 +104,9 @@ footer p {
     padding: 50px 0;
 }
 
+.drawer-container {
+    margin-top: -20px;
+}
 
 .box.drawer {
     margin: 0 auto;
@@ -197,7 +200,6 @@ footer p {
 
     .navbar {
         border-radius: 0;
-        margin-bottom: 0;
     }
 
     .navbar-header {
