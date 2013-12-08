@@ -21,8 +21,9 @@ var Blog = {};
                 $('#posts').prepend($(html).addClass('bounceIn animated'));
                 $('#control-bar').slideUp();
 
-                $('#post-form').submit(Blog.createPost);
                 Editor.bind();
+
+                $('#post-form').submit(Blog.createPost);
 
                 setTimeout(function() {
                     $('#create-post').removeClass('bounceIn animated');
