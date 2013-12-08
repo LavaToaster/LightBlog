@@ -59,17 +59,17 @@
                             <form id="login-form" role="form">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email">
+                                    <input type="email" class="form-control" id="email" name="email" tabindex="1">
                                 </div>
                                 <div class="form-group">
                                     <a class="pull-right" href="#">Forgot password?</a>
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password">
+                                    <input type="password" class="form-control" id="password" tabindex="2" name="password">
                                 </div>
                                 <div class="checkbox pull-right">
-                                    <label> <input type="checkbox" name="rememberme" value="1"> Remember me </label>
+                                    <label> <input type="checkbox" name="rememberme" value="1" tabindex="3"> Remember me </label>
                                 </div>
-                                <button type="submit" class="btn btn btn-primary">
+                                <button type="submit" class="btn btn btn-primary" tabindex="4">
                                     Log In
                                 </button>
                             </form>
