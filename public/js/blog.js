@@ -3,6 +3,16 @@ var Blog = {};
 (function() {
     Blog.createPostOpen = false;
 
+    Blog.closeNewPostForm = function(event) {
+        var $createPost = $('#create-post');
+        $createPost.addClass('bounceOut animated');
+        setTimeout(function() {
+           $createPost.slideUp('normal', function() {
+               $createPost.remove();
+           });
+        }, 1000);
+    };
+
     Blog.newPost = function(event) {
         if(Blog.createPostOpen) {
             $('#control-bar').slideUp('normal', function() {
@@ -31,7 +41,10 @@ var Blog = {};
 
                 setTimeout(function() {
                     $('#create-post').removeClass('bounceIn animated');
+
+                    $('.close-form').click(Blog.closeNewPostForm);
                 }, 1000);
+
             },
             error: function(data) {
                 Blog.createPostOpen = false;
