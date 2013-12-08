@@ -8,7 +8,7 @@
     "license": "MIT",
     "dependencies": {
         "jquery": "2.0.*",
-        "bootstrap": "3.0.*",
+        "bootstrap": "3.0.2",
         "sir-trevor-js": "0.3.*",
         "animate.css": "v2.1.0"
     },
