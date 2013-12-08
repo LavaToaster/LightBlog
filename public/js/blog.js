@@ -1,8 +1,10 @@
 var Blog = {};
 
 (function() {
+    Blog.createPostOpen = false;
+
     Blog.newPost = function(event) {
-        if($('#create-post').length) {
+        if(Blog.createPostOpen) {
             $('#control-bar').slideUp('normal', function() {
                 $('#create-post').addClass('pulse animated');
                 setTimeout(function() {
@@ -12,6 +14,8 @@ var Blog = {};
 
             return;
         }
+
+        Blog.createPostOpen = true;
 
         $.ajax({
             type: 'get',
@@ -28,6 +32,10 @@ var Blog = {};
                 setTimeout(function() {
                     $('#create-post').removeClass('bounceIn animated');
                 }, 1000);
+            },
+            error: function(data) {
+                Blog.createPostOpen = false;
+                alert('There was an error retrieving the create post form');
             },
             dataType: 'html'
         });
