@@ -3,7 +3,13 @@ var Blog = {};
 (function() {
     Blog.newPost = function(event) {
         if($('#create-post').length) {
-            $('#control-bar').slideUp();
+            $('#control-bar').slideUp('normal', function() {
+                $('#create-post').addClass('pulse animated');
+                setTimeout(function() {
+                    $('#create-post').removeClass('pulse animated');
+                }, 1000);
+            });
+
             return;
         }
 
