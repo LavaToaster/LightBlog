@@ -60,7 +60,7 @@ var Blog = {};
         });
     };
 
-    Blog.delete = function(event) {
+    Blog.removePost = function(event) {
         var $this = $(this).closest('.box');
 
         $.ajax({
@@ -89,6 +89,6 @@ var Blog = {};
         $('#control-bar').slideToggle();
     });
 
-    $('.delete-post').click(Blog.delete);
+    $('.delete-post').click(Blog.removePost);
 
 })();
