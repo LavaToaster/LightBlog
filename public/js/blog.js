@@ -41,7 +41,7 @@ var Blog = {};
                 $createPost.addClass('bounceOut animated');
                 setTimeout(function() {
                     $createPost.remove();
-                    $('#posts').prepend($(data.html).find('div').addClass('bounceIn animated').html());
+                    $('#posts').prepend($(data.html).find('div').addClass('bounceIn animated').parent().html());
                     twttr.widgets.load();
                 }, 1000);
             },
