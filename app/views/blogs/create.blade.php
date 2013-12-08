@@ -1,4 +1,7 @@
-<div class="box" id="create-post">
+<div class="box post" id="create-post">
+    <div class="post-interaction">
+        <button class="btn btn-link glyphicon glyphicon-remove close-form"></button>
+    </div>
     <div class="col-lg-12 text-center">
         <form id="post-form" method="post">
             <h2><span id="post-title" contenteditable="true">Title</span><br><small id="post-date">{{ \Carbon\Carbon::now() }}</small></h2>
