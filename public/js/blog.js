@@ -76,7 +76,7 @@ var Blog = {};
             error: function(request) {
                 $createPost.addClass('shake animated');
                 setTimeout(function() {
-                   $createPost.removeClass('bounceIn animated');
+                   $createPost.removeClass('shake animated');
                 }, 1000);
             }
         });
