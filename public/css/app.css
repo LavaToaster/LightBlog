@@ -29,6 +29,11 @@ hr {
     max-width: 400px;
 }
 
+a,
+button {
+    transition:.5s;
+}
+
 .brand,
 .address-bar,
 .user-login {
