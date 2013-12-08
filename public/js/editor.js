@@ -7,7 +7,7 @@ var Editor = {};
     };
 	
     Editor.triggerSubmission = function() {
-        SirTrevor.triggerSubmission();
+        SirTrevor.onFormSubmit();
     };
 
     SirTrevor.setDefaults({
