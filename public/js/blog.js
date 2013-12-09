@@ -9,6 +9,7 @@ var Blog = {};
         setTimeout(function() {
            $createPost.slideUp('normal', function() {
                $createPost.remove();
+               Blog.createPostOpen = false;
            });
         }, 1000);
     };
@@ -69,6 +70,7 @@ var Blog = {};
                 $createPost.addClass('bounceOut animated');
                 setTimeout(function() {
                     $createPost.remove();
+                    Blog.createPostOpen = false;
                     $('#posts').prepend($(data.html).find('div').addClass('bounceIn animated').parent().html());
                     twttr.widgets.load();
                 }, 1000);
