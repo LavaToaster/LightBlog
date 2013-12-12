@@ -36,24 +36,46 @@ return array(
 
         'beanstalkd' => array(
             'driver' => 'beanstalkd',
-            'host' => 'localhost',
-            'queue' => 'default',
+            'host'   => 'localhost',
+            'queue'  => 'default',
         ),
 
         'sqs' => array(
             'driver' => 'sqs',
-            'key' => 'your-public-key',
+            'key'    => 'your-public-key',
             'secret' => 'your-secret-key',
-            'queue' => 'your-queue-url',
+            'queue'  => 'your-queue-url',
             'region' => 'us-east-1',
         ),
 
         'iron' => array(
-            'driver' => 'iron',
+            'driver'  => 'iron',
             'project' => 'your-project-id',
-            'token' => 'your-token',
-            'queue' => 'your-queue-name',
+            'token'   => 'your-token',
+            'queue'   => 'your-queue-name',
         ),
+
+        'redis' => array(
+            'driver' => 'redis',
+            'queue'  => 'default',
+        ),
+
+    ),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Failed Queue Jobs
+    |--------------------------------------------------------------------------
+    |
+    | These options configure the behavior of failed queue job logging so you
+    | can control which database and table are used to store the jobs that
+    | have failed. You may change them to any database / table you wish.
+    |
+    */
+
+    'failed' => array(
+
+        'database' => 'mysql', 'table' => 'failed_jobs',
 
     ),
 

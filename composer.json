@@ -3,7 +3,7 @@
     "description": "A smallish what can I do in my spare time blog.",
     "license": "MIT",
     "require": {
-        "laravel/framework": "4.0.*",
+        "laravel/framework": "4.1.*",
         "thujohn/twitter": "dev-master",
         "dflydev/markdown": "v1.0.3",
         "mccool/laravel-auto-presenter": "*"
