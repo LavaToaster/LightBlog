@@ -10,7 +10,10 @@
         "jquery": "2.0.*",
         "bootstrap": "3.0.*",
         "sir-trevor-js": "0.3.*",
-        "animate.css": "v2.1.0"
+        "animate.css": "v2.1.0",
+        "angular-latest": "v1.2.*",
+        "angular-ui-router": "v0.2.*",
+        "angular-ui-bootstrap": "#bootstrap3"
     },
     "resolutions": {
         "jquery": "2.0.*"
